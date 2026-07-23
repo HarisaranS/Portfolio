@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className="glass-panel-cyan rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-300">
         <a href="#home" className="flex items-center gap-2 text-cyan-400 font-mono font-bold text-lg tracking-wider hover:text-white transition-colors duration-200">
           <Shield className="w-5 h-5 animate-pulse text-cyan-400" />
-          <span>HARISARAN_</span>
+          <span>Harisaran_S</span>
         </a>
 
         {/* Desktop nav links */}

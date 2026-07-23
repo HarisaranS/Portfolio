@@ -86,7 +86,7 @@ export default function BackgroundMesh() {
         // Draw node dot
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(6, 182, 212, 0.4)';
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.25)';
         ctx.fill();
         
         // Draw connections between nodes
@@ -101,7 +101,7 @@ export default function BackgroundMesh() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
+            ctx.strokeStyle = `rgba(56, 189, 248, ${alpha * 0.55})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
@@ -113,7 +113,8 @@ export default function BackgroundMesh() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`; // purple hover link
+          ctx.strokeStyle = `rgba(99, 102, 241, ${alpha * 0.55})`; // indigo hover link
+
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }

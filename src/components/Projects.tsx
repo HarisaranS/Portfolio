@@ -12,11 +12,11 @@ const projectsData = [
     icon: Target,
     themeColor: 'cyan',
     glassClass: 'glass-panel-cyan',
-    glowColor: 'shadow-[0_0_20px_rgba(6,182,212,0.15)]',
+    glowColor: 'shadow-[0_4px_24px_rgba(0,0,0,0.6)]',
     tagColor: 'bg-cyan-950 text-cyan-400 border-cyan-800/30',
     description:
       'Modular Python network reconnaissance tool integrating Nmap scanning with Groq Llama-3.3-70B AI to deliver contextual security insights, CVE enrichment, and automated risk scoring.',
-    github: 'https://github.com',
+    github: 'https://github.com/HarisaranS/Sn1p3rNetX',
     tags: ['Python', 'Nmap', 'LLM Integration', 'CVE Enrichment', 'CLI Tooling'],
     details:
       'Engineered a production-ready CLI using the Rich library for interactive UIs, with scan results persisted to a local SQLite database. Multiformat report exports (JSON/PDF) enable security teams to share threat vectors easily.',
@@ -45,11 +45,11 @@ const projectsData = [
     icon: ShieldAlert,
     themeColor: 'purple',
     glassClass: 'glass-panel-purple',
-    glowColor: 'shadow-[0_0_20px_rgba(168,85,247,0.15)]',
+    glowColor: 'shadow-[0_4px_24px_rgba(0,0,0,0.6)]',
     tagColor: 'bg-purple-950 text-purple-400 border-purple-800/30',
     description:
       'Virtualized DMZ honeypot architecture using pfSense and Ubuntu to simulate vulnerable services, isolate production networks, and capture real-world attack vectors.',
-    github: 'https://github.com',
+    github: 'https://github.com/HarisaranS/DMZ-Honeypot',
     tags: ['pfSense', 'Honeypot', 'Network Security', 'Threat Intelligence'],
     details:
       'Simulated standard services (SSH, FTP, HTTP) within the DMZ to attract adversaries. Designed custom Python collectors that parsed syslog feeds, capturing credential attempts and logging source IPs for automated blocklists.',
@@ -73,11 +73,11 @@ const projectsData = [
     icon: Globe,
     themeColor: 'green',
     glassClass: 'glass-panel-green',
-    glowColor: 'shadow-[0_0_20px_rgba(16,185,129,0.15)]',
+    glowColor: 'shadow-[0_4px_24px_rgba(0,0,0,0.6)]',
     tagColor: 'bg-emerald-950 text-emerald-400 border-emerald-800/30',
     description:
       'Web enumeration tool that automates directory, endpoint, and hidden resource discovery on target web servers to assist in penetration testing recon.',
-    github: 'https://github.com',
+    github: 'https://github.com/HarisaranS/BsWebEnum',
     tags: ['Python', 'Web Enumeration', 'Recon', 'Pentesting'],
     details:
       'Multi-threaded directory scanner built with Python. Features custom headers injection, randomized User-Agent rotations to bypass basic WAF rate-limiting, and smart status code filters.',

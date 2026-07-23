@@ -49,10 +49,9 @@ function CountUp({ value, duration = 1500 }: CountUpProps) {
 interface ProgressRingProps {
   percentage: number;
   colorClass: string;
-  glowClass: string;
 }
 
-function ProgressRing({ percentage, colorClass, glowClass }: ProgressRingProps) {
+function ProgressRing({ percentage, colorClass }: ProgressRingProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const radius = 36;
@@ -76,7 +75,7 @@ function ProgressRing({ percentage, colorClass, glowClass }: ProgressRingProps) 
           cx="40"
           cy="40"
           r={radius}
-          className={`${colorClass} ${glowClass}`}
+          className={colorClass}
           strokeWidth="6"
           fill="transparent"
           strokeDasharray={circumference}
@@ -182,7 +181,7 @@ export default function About() {
                 </div>
                 <p className="text-xs text-slate-400">Solved over 300+ cybersecurity rooms.</p>
                 <a
-                  href="https://tryhackme.com"
+                  href="https://tryhackme.com/p/bl4ckn3t"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-mono text-[10px] text-cyan-400 hover:text-white transition-colors"
@@ -190,7 +189,7 @@ export default function About() {
                   ACCESS RECORD <ExternalLink className="w-2.5 h-2.5" />
                 </a>
               </div>
-              <ProgressRing percentage={99} colorClass="stroke-cyan-500" glowClass="shadow-[0_0_8px_#06b6d4]" />
+              <ProgressRing percentage={99} colorClass="stroke-cyan-500" />
             </div>
 
             {/* LeetCode Card */}
@@ -202,7 +201,7 @@ export default function About() {
                 </div>
                 <p className="text-xs text-slate-400">230+ Data Structures & Algorithms solved.</p>
                 <a
-                  href="https://leetcode.com"
+                  href="https://leetcode.com/u/HarisaranS/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-mono text-[10px] text-purple-400 hover:text-white transition-colors"
@@ -210,7 +209,7 @@ export default function About() {
                   ACCESS RECORD <ExternalLink className="w-2.5 h-2.5" />
                 </a>
               </div>
-              <ProgressRing percentage={65} colorClass="stroke-purple-500" glowClass="shadow-[0_0_8px_#a855f7]" />
+              <ProgressRing percentage={65} colorClass="stroke-purple-500" />
             </div>
 
             {/* Skillrack Card */}
@@ -222,7 +221,7 @@ export default function About() {
                 </div>
                 <p className="text-xs text-slate-400">1290+ coding problems solved.</p>
                 <a
-                  href="https://skillrack.com"
+                  href="https://www.skillrack.com/faces/resume.xhtml?id=515144&key=5352d5bab41e5e1ff193fbfeba89d78dfdf3a50e"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-mono text-[10px] text-emerald-400 hover:text-white transition-colors"
@@ -230,7 +229,7 @@ export default function About() {
                   ACCESS RECORD <ExternalLink className="w-2.5 h-2.5" />
                 </a>
               </div>
-              <ProgressRing percentage={85} colorClass="stroke-emerald-500" glowClass="shadow-[0_0_8px_#10b981]" />
+              <ProgressRing percentage={85} colorClass="stroke-emerald-500" />
             </div>
           </motion.div>
         </div>

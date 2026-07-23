@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { useDecryptText } from '../hooks/useDecryptText';
-import { Mail, Phone, ArrowRight, Download, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, ArrowRight, ShieldCheck } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 
 export default function Hero() {
-  const { displayText: nameText, trigger: triggerNameDecrypt } = useDecryptText('HARISARAN S', 45, 2);
+  const { displayText: nameText, trigger: triggerNameDecrypt } = useDecryptText('Harisaran_S', 45, 2);
 
   const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -18,9 +18,12 @@ export default function Hero() {
     }
   };
 
-  const handleDownloadResume = () => {
-    // Open print window configured for resume-like layout, or save as PDF
-    window.print();
+  const handleScrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      const offsetTop = aboutSection.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -73,7 +76,7 @@ export default function Hero() {
         >
           <p>
             Pursuing B.E. Computer Science and Engineering (specializing in Cybersecurity) at{' '}
-            <span className="text-white font-medium">Sri Eshwar College of Engineering</span>.
+            <span className="text-white font-medium inline-block whitespace-nowrap">Sri Eshwar College of Engineering</span>.
           </p>
           <p className="font-mono text-xs text-slate-500">
             CURRENT STANDING: CGPA 8.43 | CLASS OF 2024–2028
@@ -104,7 +107,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/harisaran-s-a08a1b333/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl glass-panel text-slate-400 hover:text-cyan-400 border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group"
@@ -114,7 +117,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/HarisaranS/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl glass-panel text-slate-400 hover:text-cyan-400 border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group"
@@ -138,7 +141,7 @@ export default function Hero() {
             className="relative group p-[1px] rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-cyan-400"
           >
             {/* Spinning gradient border */}
-            <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 rounded-xl animate-spin duration-3000 opacity-75 group-hover:opacity-100 transition-opacity" style={{ animationDuration: '4s' }} />
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-800 via-slate-800 to-cyan-800 rounded-xl animate-spin duration-3000 opacity-40 group-hover:opacity-75 transition-opacity" style={{ animationDuration: '4s' }} />
             
             {/* Inner button content */}
             <span className="relative block px-8 py-3.5 bg-black rounded-[11px] text-cyan-400 font-mono text-sm tracking-wider font-semibold transition-all group-hover:bg-cyan-950/20 group-hover:text-white flex items-center gap-2">
@@ -147,13 +150,13 @@ export default function Hero() {
             </span>
           </a>
 
-          {/* Secondary Button */}
+          {/* Secondary Button - About Section */}
           <button
-            onClick={handleDownloadResume}
-            className="flex items-center gap-2 px-8 py-4 rounded-xl border border-white/10 hover:border-purple-500/30 bg-white/5 hover:bg-purple-950/10 text-slate-300 hover:text-purple-400 transition-all duration-300 font-mono text-sm tracking-wider"
+            onClick={handleScrollToAbout}
+            className="flex items-center gap-2 px-8 py-4 rounded-xl border border-white/10 hover:border-indigo-500/30 bg-white/5 hover:bg-indigo-950/10 text-slate-300 hover:text-indigo-400 transition-all duration-300 font-mono text-sm tracking-wider"
           >
-            <Download className="w-4 h-4" />
-            DOWNLOAD RESUME
+            <ArrowRight className="w-4 h-4" />
+            LEARN MORE
           </button>
         </motion.div>
       </div>
